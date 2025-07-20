@@ -1,6 +1,5 @@
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { StructuredOutputParser } from "@langchain/core/output_parsers";
-import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { MongoClient } from "mongodb";
 import { MongoDBAtlasVectorSearch } from "@langchain/mongodb";
 import { z } from "zod";
