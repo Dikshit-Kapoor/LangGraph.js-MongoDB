@@ -40,7 +40,7 @@ export async function callAgent(client, query, thread_id) {
   
         // Initialize vector store
         const vectorStore = new MongoDBAtlasVectorSearch(
-          new OpenAIEmbeddings(),
+          new GoogleGenerativeAIEmbeddings(),
           dbConfig
         );
   
