@@ -1,5 +1,5 @@
 import { ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
-import { AIMessage, BaseMessage, HumanMessage } from "@langchain/core/messages";
+import { HumanMessage } from "@langchain/core/messages";
 import {
   ChatPromptTemplate,
   MessagesPlaceholder,
@@ -10,7 +10,6 @@ import { tool } from "@langchain/core/tools";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 import { MongoDBSaver } from "@langchain/langgraph-checkpoint-mongodb";
 import { MongoDBAtlasVectorSearch } from "@langchain/mongodb";
-import { MongoClient } from "mongodb";
 import { z } from "zod";
 import "dotenv/config";
 
