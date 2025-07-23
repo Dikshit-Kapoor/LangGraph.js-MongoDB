@@ -66,9 +66,10 @@ export async function callAgent(client, query, thread_id) {
     // We can extract the state typing via `GraphState.State`
     const toolNode = new ToolNode<typeof GraphState.State>(tools);
   
-    const model = new ChatAnthropic({
-      model: "claude-3-5-sonnet-20240620",
-      temperature: 0,
+    const model = new ChatGoogleGenerativeAI({
+      apiKey: process.env.GOOGLE_API_KEY,
+      model: 'gemini-1.5-flash',
+      temperature: 0.7,
     }).bindTools(tools);
   
     // Define the function that determines whether to continue or not
